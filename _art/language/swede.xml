@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	
+	<variables>
+		
+		<langue>sv</langue>
+
+<sysLabel>Tillverkare
+Typ
+Generation
+Släpp
+Media
+Kontrollant
+
+Total</sysLabel>
+
+	</variables>
+	
+</theme>

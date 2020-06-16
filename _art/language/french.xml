@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	
+	<variables>
+		
+		<langue>fr</langue>
+		
+		<!-- GENERAL SWAP -->
+		
+		<yes>Oui</yes>
+		<no>Non</no>
+
+	<!-- Swap Theme Color -->
+		<subset.swapColor>Jeux de couleurs</subset.swapColor>
+		<colblue>Bleu</colblue>
+		<coldarkBlue>Bleu foncé</coldarkBlue>
+		<colpurple>Violet</colpurple>
+		<colred>Rouge</colred>
+		<colorange>Orange</colorange>
+		<colyellow>Jaune</colyellow>
+		<colgreen>Vert</colgreen>
+
+	<!-- Swap Theme Opacity -->
+		<subset.swapOpacity>Fonds du thème</subset.swapOpacity>
+		<translucent>Translucides</translucent>
+		<opaque>Opaques</opaque>
+
+	<!-- Swap Video Effect -->
+		<subset.swapVideoEffect>Effet sur les aperçus vidéo</subset.swapVideoEffect>
+		<videoEffectDefault>Aucun</videoEffectDefault>
+		<videoEffectBump>Rebond</videoEffectBump>
+
+		<!-- SYSTEM SWAP -->
+		
+	<!-- Swap Ambiance-->
+		<subset.swapAmbiance>Ambiance du musée</subset.swapAmbiance>
+		<library>Bibliothèque, l'histoire</library> <!-- Le lieu de la connaissance de l'histoire -->
+		<artGallery>Galerie d'art, en images</artGallery> <!-- Une belle exposition d'images -->
+		<mediaLibrary>Médiathèque, vidéoludique</mediaLibrary> <!-- Avec une vidéo qui montre des choses -->
+
+	<!-- Swap Menu -->
+		<subset.systemView>Menu des systèmes</subset.systemView>
+		<menuVertRight>Liste verticale à droite</menuVertRight>
+		<menuVertLeft>Liste verticale à gauche</menuVertLeft>
+		<menuHorizDown>Liste horizontale en bas</menuHorizDown>
+		<menuWheelRight>Roue verticale à droite</menuWheelRight>
+		<menuWheelLeft>Roue verticale à gauche</menuWheelLeft>
+
+	<!--  Swap Video Preview Type -->
+		<subset.systemSwapVideo>Vidéo d'aperçu système</subset.systemSwapVideo>
+		<swapVideoRandom>Jeu au hasard</swapVideoRandom>
+		<swapVideoCommercial>Publicité TV</swapVideoCommercial>
+		<swapVideoHide>Aucune</swapVideoHide>
+
+	<!-- Swap between Gray and Colored Logos -->
+		<subset.themeSwapColored>Rendu des icones système</subset.themeSwapColored>
+		<colgray>Gris</colgray>
+		<colored>Colorés</colored>
+		
+	<!-- Choice font size by Display size -->
+		<subset.setDisplaySize>Résolution d'affichage</subset.setDisplaySize>
+		<displayHd>HD 1080p / 720p</displayHd>
+		<display1680>1680x1050</display1680>
+		
+	<!-- Swap CRT Video Shader -->
+		<subset.swapVideoShader>Filtre du fond vidéo</subset.swapVideoShader>
+		<videoShaderNone>Aucun</videoShaderNone>
+		<videoShaderCrt>CRT</videoShaderCrt>
+	
+	<!-- Info Labels -->
+<sysLabel>Fabricant
+Type
+Génération
+Sortie
+Média
+Contrôleur(s)
+
+Total</sysLabel>
+		
+		<!-- GAMES LIST -->
+
+		<videoFullscreenViewName>Vidéo plein écran</videoFullscreenViewName>
+		<gridDetailViewName>Grille de Jaquettes + Détail</gridDetailViewName>
+		<tilesTitleshotVideoViewName>Grille d'écrans titre</tilesTitleshotVideoViewName>
+		<tilesScreenshotVideoMarqueeViewName>Grille d'écrans de jeu + Logo</tilesScreenshotVideoMarqueeViewName>
+		<marqueeDetailViewName>Liste de logos (beta)</marqueeDetailViewName>
+
+		<subset.gamelistInfoColor>Fond de la liste de jeux</subset.gamelistInfoColor>
+		<gamelistInfoLight>Lumineux</gamelistInfoLight>
+		<gamelistInfoDarth>Sombre</gamelistInfoDarth>
+		
+		<subset.swapImages>Balise XML des jaquette</subset.swapImages>
+		<thumbnail>thumbnail</thumbnail>
+		<image>image</image>
+		
+	</variables>
+	
+</theme>
+
+<!--
+TITLES IMAGES to translate:
+
+favorites     = FAVORIS
+2 players     = JEUX pour 2 JOUEURS
+4 players     = JEUS pour-s-eclater-a 4 JOUEURS
+last played   = DERNIERES PARTIES
+all games     = TOUS LES JEUX
+Never played  = JAMAIS JOUES
+
+Collections   = COLLECTIONS
+
+-->
+

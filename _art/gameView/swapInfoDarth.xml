@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+
+	<view name="basic, detailed, video, grid">
+
+		<!-- LABEL -->
+        <text name="md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, md_lbl_description, md_lbl_players,
+					md_lbl_releasedate, md_lbl_lastplayed, md_lbl_gametime">
+			<color>${userLightColor}</color>
+        </text>
+
+		<!-- TEXTE -->
+        <text name="md_developer, md_publisher, md_genre, md_playcount, md_description, md_players, md_gametime">
+			<color>${themeLightColor}</color>
+        </text>
+        <datetime name="md_releasedate, md_lastplayed">
+			<color>${themeLightColor}</color>
+        </datetime>
+		<rating name="md_rating">
+			<color>${themeLightColor}</color>
+		</rating>
+
+		<image name="md_hidden, md_kidgame, md_favorite">
+			<color>${userLightColor}</color>
+		</image>
+		
+		<!-- BACKGROUND -->
+		<image name="bg-image" extra="true">
+			<color>${themeDarkColor}CC</color> <!-- 80% -->
+		</image>
+		<!-- BACKGROUND VIDEO -->
+		<image name="background_video" extra="true">
+			<color>${themeDarkColor}CC</color> <!-- 80% -->
+		</image>
+		
+	</view>
+	
+	<view name="grid">
+	
+		<image name="logo"> <!-- System -->
+			<color>FFFFFFFF</color>
+		</image>
+
+	</view>
+	
+</theme>

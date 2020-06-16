@@ -1,0 +1,615 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+theme name:     RVGM
+author:         Darknior
+version:		2.0
+email:			darknior@hotmail.com
+System 			Batocera 5.25+
+
+font: 			Roboto-Light.ttf, Roboto-Medium.ttf, Roboto-Bold.ttf, Players.fft, Digib.ttf
+GIT:			https://github.com/Darknior/RVGM-BT-Theme
+forum:			https://retropie.org.uk/forum/topic/16454/rvgm-retro-retropie-video-game-museum-theme-in-development/
+
+Wiki Batocera:	https://batocera.org/wiki/doku.php?id=en:write_themes_for_emulationstation
+Doc ES:			https://github.com/fabricecaruso/EmulationStation/blob/master/THEMES.md
+-->
+
+<theme defaultView="video">
+	<formatVersion>7</formatVersion>
+
+	<!-- 
+	System variable come from es_systems.cfg
+	Ex : <path>./art/logo/${system.theme}.svg</path>
+	${system.name} <name>nes</name>
+	${system.fullName} <fullname>Nintendo Entertainment System</fullname>
+	${system.theme} <theme>nes</theme>
+	-->
+	<variables>
+		
+			<activeView>library</activeView>
+			<activeMenu>vertRight</activeMenu>
+			<activeColor>blue</activeColor>
+			<userDarkColor>0e3d63</userDarkColor>
+			<userColor>56baeb</userColor>
+			<userLightColor>c1e8f9</userLightColor>
+		
+		<themeDarkColor>4c5058</themeDarkColor> 		<!-- Dark gray 		${themeDarkColor}	-->
+		<themeLightColor>bebebe</themeLightColor> 		<!-- Light gray 	${themeLightColor}	-->
+		
+		<fontClock>Digib.ttf</fontClock>
+		<fontPlayers>Players.ttf</fontPlayers>
+
+		<fontLight>Cabin-Regular.ttf</fontLight> 		<!-- gamelist -->
+		<fontMedium>Cabin-Regular.ttf</fontMedium>
+		<fontBold>Cabin-Bold.ttf</fontBold>
+		
+		<opacity>CC</opacity>							<!-- Menu background opacity -->
+		<videoEffect>none</videoEffect>					<!-- Effect on video preview show -->
+		<videoType>random</videoType>					<!-- Video type on system view -->
+	
+	</variables>
+
+	<!-- Translate Systems Info & Description images, change Systems Logo & Photo images when available
+	https://github.com/batocera-linux/batocera-emulationstation/tree/master/locale/lang -->
+	<include>./_art/language/english.xml</include>
+	<include>./_art/language/en/${system.theme}.xml</include>
+	
+	<include lang="ar">./_art/language/arabe.xml</include>				<!-- Arabe -->
+	<include lang="ca">./_art/language/espagnol.xml</include> 			<!-- Catalan -> Espagnol - OK -->
+	<include lang="de">./_art/language/deutsch.xml</include>			<!-- Allemand -->
+	<include lang="el">./_art/language/greek.xml</include>				<!-- Grec -->
+	<include lang="es">./_art/language/espagnol.xml</include> 			<!-- Espagnol - OK -->
+	<!-- <include lang="es_MX">./_art/language/espagnol.xml</include> 	<!-- Mexico -> Espagnol -->
+	<include lang="eu">./_art/language/espagnol.xml</include> 			<!-- eu_ES / Basque -> Espagnol - OK -->
+	<include lang="fr">./_art/language/french.xml</include> 			<!-- Français - OK -->
+	<include lang="hu">./_art/language/hungarian.xml</include>			<!-- Hongrois -->
+	<include lang="it">./_art/language/italian.xml</include>			<!-- Italien -->
+	<include lang="jp">./_art/language/japanese.xml</include>			<!-- Japonnais -->
+	<include lang="ko">./_art/language/korean.xml</include>				<!-- Korée -->
+	<include lang="nb">./_art/language/norwegian.xml</include>			<!-- nb_NO / Norvégien ?? -->
+	<include lang="nl">./_art/language/netherlander.xml</include>		<!-- Néerlandais -->
+	<include lang="nn">./_art/language/norwegian.xml</include>			<!-- nn_NO / Norvégien ?? -->
+	<include lang="pl">./_art/language/polack.xml</include>				<!-- Polonais -->
+	<!-- <include lang="pt_BR">./_art/language/brazilian.xml</include> 	<!-- pt_BR / Brésilien -> Portugais - OK -->
+	<include lang="pt">./_art/language/portuguese.xml</include> 		<!-- pt_PT / Portugais - OK -->
+	<include lang="ru">./_art/language/russian.xml</include>			<!-- ru_RU / Russe -->
+	<include lang="sv">./_art/language/swede.xml</include>				<!-- sv_SE / Suédois -->
+	<include lang="tr">./_art/language/turkish.xml</include>			<!-- Turc -->
+	<include lang="zh">./_art/language/chineese.xml</include>			<!-- zh_CN / Chinois -->
+	<!-- <include lang="zh">./_art/language/chineese.xml</include>		<!-- zh_TW / Chinois -> Taiwan -->
+	
+	<!-- TRAD SYSTEM -->
+	<include>./_art/language/${langue}/${system.theme}.xml</include>
+
+	<!-------------------------------------------------------------------------------------------->
+	<!-- GENERAL SWAP ---------------------------------------------------------------------------->
+	
+	<!-- Swap Theme Color -->
+	<subset name="swapColor" displayName="${subset.swapColor}">
+		<include name="blue"     displayName="${colblue}"    >./_art/colors/blue.xml</include> <!-- default -->
+		<include name="darkBlue" displayName="${coldarkBlue}">./_art/colors/darkBlue.xml</include>
+		<include name="purple"   displayName="${colpurple}"  >./_art/colors/purple.xml</include>
+		<include name="red"      displayName="${colred}"     >./_art/colors/red.xml</include>
+		<include name="orange"   displayName="${colorange}"  >./_art/colors/orange.xml</include>
+		<include name="yellow"   displayName="${colyellow}"  >./_art/colors/yellow.xml</include>
+		<include name="green"    displayName="${colgreen}"   >./_art/colors/green.xml</include>
+	</subset>
+	
+	<!-- Swap Theme Opacity -->
+	<subset name="swapOpacity" displayName="${subset.swapOpacity}">
+		<include name="themeOpacityTrans"  displayName="${translucent}"/>
+		<include name="themeOpacityOpaque" displayName="${opaque}"      >./_art/globalView/swapOpacity.xml</include>
+	</subset>
+
+	<!-- Swap Video Effect -->
+	<subset name="swapVideoEffect" displayName="${subset.swapVideoEffect}">
+		<include name="videoEffectDefault" displayName="${videoEffectDefault}"/> <!-- No effect -->
+		<include name="videoEffectBump"    displayName="${videoEffectBump}"    >./_art/globalView/swapVideoEffect.xml</include>
+	</subset>
+	
+	<!-------------------------------------------------------------------------------------------->
+	<!-- SYSTEM SWAP ----------------------------------------------------------------------------->
+
+	<!-- VIEW SYSTEM -->
+	<include>./_art/systemView/viewSystem.xml</include>
+
+	<!-- Swap Ambiance-->
+	<subset name="swapAmbiance" displayName="${subset.swapAmbiance}">
+		<include name="setLibrary"      displayName="${library}"     >./_art/systemView/setLibrary.xml</include>
+		<include name="setArtGallerys"  displayName="${artGallery}"  >./_art/systemView/setArtGallery.xml</include>
+		<include name="setMediaLibrary" displayName="${mediaLibrary}">./_art/systemView/setMediaLibrary.xml</include>
+	</subset>
+
+	<!-- Swap Menu -->
+	<subset name="systemView" displayName="${subset.systemView}">
+		<include name="menuVertRight" displayName="${menuVertRight}" >./_art/systemView/menuVertRight.xml</include>
+		<include name="menuVertLeft"  displayName="${menuVertLeft}"  >./_art/systemView/menuVertLeft.xml</include>
+		<include name="menuHorizDown" displayName="${menuHorizDown}" >./_art/systemView/menuHorizDown.xml</include>
+		<include name="menuWheelRight" displayName="${menuWheelRight}" >./_art/systemView/menuWheelRight.xml</include>
+		<include name="menuWheelLeft"  displayName="${menuWheelLeft}"  >./_art/systemView/menuWheelLeft.xml</include>
+	</subset>
+	
+	<!-- Swap Video Preview Type : UTILISER VARIABLE !!!! -->
+	<subset name="systemSwapVideo" displayName="${subset.systemSwapVideo}">
+		<include name="swapVideoRandom" 	displayName="${swapVideoRandom}"	/> <!-- Video Random -->
+		<!-- <include name="swapVideoCommercial"	displayName="${swapVideoCommercial}" >./_art/systemView/swapVideoCommercial.xml</include> -->
+		<include name="swapVideoHide"  		displayName="${swapVideoHide}"   	 >./_art/systemView/swapVideoHide.xml</include>
+	</subset>
+	<!-- <path>./../../../../videos/RVGM-Theme/${system.theme}/playlist.m3u</path> -->
+ 
+	<!-- TRY: <video name="staticBackgroundVideo"> for video effect in background ---------------->
+	
+	<!-------------------------------------------------------------------------------------------->
+	<!-- GAMELIST SWAP --------------------------------------------------------------------------->
+
+
+	<!-- Popup System -->
+	<view name="menu">
+
+		<menuText name="menutitle">
+			<fontPath>./_art/font/${fontBold}</fontPath>
+			<fontSize>0.044</fontSize>
+			<color>${userColor}</color>
+		</menuText>
+		<menuText name="menufooter">
+			<fontPath>./_art/font/${fontMedium}</fontPath>
+			<fontSize>0.02</fontSize>
+			<color>${themeLightColor}</color>
+		</menuText>
+		<menuText name="menutext">
+			<fontPath>./_art/font/${fontMedium}</fontPath>
+			<fontSize>0.035</fontSize>
+			<color>${themeLightColor}</color>
+			<separatorColor>${themeDarkColor}</separatorColor> <!-- Séparateur -->
+			<selectorColor>${themeLightColor}</selectorColor>
+			<selectorColorEnd>${themeLightColor}</selectorColorEnd>
+			<selectedColor>${userColor}</selectedColor>
+			<selectorGradientType>horizontal</selectorGradientType>
+		</menuText>
+		<!-- Popup MiddleTitles -->
+		<menuTextSmall name="menutextsmall">
+			<fontPath>./_art/font/${fontLight}</fontPath>
+			<fontSize>0.030</fontSize>
+			<color>${userLightColor}</color> <!-- Jaune -->
+		</menuTextSmall>
+		<!-- Background de la Popup -->
+		<menuBackground name="menubg">
+			<color>${themeDarkColor}${opacity}</color>
+			<cornerSize>32 32</cornerSize>
+			<path>./_art/popup/frame.png</path>
+		</menuBackground>
+		<menuGroup name="menugroup">
+			<fontPath>./_art/font/${fontBold}</fontPath>
+			<fontSize>0.025</fontSize>
+			<color>${userLightColor}</color>
+			<separatorColor>${themeDarkColor}</separatorColor>    
+			<backgroundColor>00000000</backgroundColor>
+			<lineSpacing>2.5</lineSpacing>
+		</menuGroup>
+		<!-- Icones du menu principal -->
+		<menuIcons name="menuicons">
+			<iconKodi>./_art/iconsPopup/Kodi.png</iconKodi>
+			<iconSystem>./_art/iconsPopup/System.png</iconSystem>
+			<iconUpdates>./_art/iconsPopup/Updates.png</iconUpdates>
+			<iconGames>./_art/iconsPopup/Games.png</iconGames>
+			<iconControllers>./_art/iconsPopup/Controllers.png</iconControllers>
+			<iconUI>./_art/iconsPopup/UI.png</iconUI>
+			<iconSound>./_art/iconsPopup/Sound.png</iconSound>
+			<iconNetwork>./_art/iconsPopup/Network.png</iconNetwork>
+			<iconScraper>./_art/iconsPopup/Scraper.png</iconScraper>
+			<iconAdvanced>./_art/iconsPopup/Advanced.png</iconAdvanced>
+			<iconQuit>./_art/iconsPopup/Quit.png</iconQuit>
+			<iconRestart>./_art/iconsPopup/Restart.png</iconRestart>
+			<iconShutdown>./_art/iconsPopup/Shutdown.png</iconShutdown>
+			<iconFastShutdown>./_art/iconsPopup/Fastshutdown.png</iconFastShutdown>
+			<iconRetroachievements>./_art/iconsPopup/Contest.png</iconRetroachievements>
+		</menuIcons>
+		<menuTextEdit name="menutextedit">
+			<inactive>./_art/popup/textinput_ninepatch.png</inactive>
+			<active>./_art/popup/textinput_ninepatch_active.png</active>
+		</menuTextEdit>
+
+	</view>
+
+	<!-- View always on TOP!! -->
+	<view name="screen">
+
+		<controllerActivity name="controllerActivity">
+			<pos>0.0161 0.0107</pos>
+			<size>0.085 0.025</size>
+			<!--<horizontalAlignment>right</horizontalAlignment>-->
+			<itemSpacing>0.003</itemSpacing>
+			<imagePath>./_art/icons/gamepad.png</imagePath>
+			<color>${themeLightColor}</color>
+			<activityColor>${userColor}</activityColor>
+			<hotkeyColor>${userDarkColor}</hotkeyColor>
+		</controllerActivity>
+		<controllerActivity name="controllerActivity" tinyScreen="true">
+			<visible>false</visible>
+		</controllerActivity>
+		
+		<text name="clock">
+			<origin>0 0</origin>
+			<pos>0.9344 0.9584</pos>
+			<size>0.05 0.0384</size>
+            <verticalAlignment>center</verticalAlignment>
+			<color>${themeLightColor}</color>
+			<fontPath>./_art/font/${fontClock}</fontPath>
+			<fontSize>0.035</fontSize>
+		</text>
+
+		<batteryIndicator name="batteryIndicator">
+			<pos>0.955 0.0125</pos>
+			<size>0.033 0.033</size>
+			<incharge>./art/battery/incharge.svg</incharge>
+			<full>./art/battery/full.svg</full>
+			<at75>./art/battery/75.svg</at75>
+			<at50>./art/battery/50.svg</at50>
+			<at25>./art/battery/25.svg</at25>
+			<empty>./art/battery/empty.svg</empty>
+			<color>FFFFFFA0</color>
+		</batteryIndicator>
+		<batteryIndicator name="batteryIndicator" tinyScreen="true">
+			<pos>0.915 0.013</pos>
+			<size>0.07 0.07</size>
+		</batteryIndicator>
+  
+	</view>
+	
+	<!--TO DO: Add SYSTEM CRT effect here in SCREEN view -->
+	
+	<!-- Helpsystem general design -->
+	<view name="system, basic, detailed, video, grid">
+	
+		<helpsystem name="help">
+			<origin>0 0</origin>
+			<textColor>${themeLightColor}</textColor>
+			<iconColor>${userColor}</iconColor>
+			<fontPath>./_art/font/${fontBold}</fontPath>
+			<fontSize>0.024</fontSize>
+			<!--
+            <iconColor>FFFFFFFF</iconColor>
+            <iconUpDown>./../arts/arcade/updown.png</iconUpDown>
+            <iconLeftRight>./../arts/arcade/leftright.png</iconLeftRight>
+            <iconUpDownLeftRight>./../arts/arcade/all.png</iconUpDownLeftRight>
+            <iconA>./../arts/arcade/a.png</iconA>
+            <iconB>./../arts/arcade/b.png</iconB>
+            <iconX>./../arts/arcade/x.png</iconX>
+            <iconY>./../arts/arcade/y.png</iconY>
+            <iconL>./../arts/arcade/l.png</iconL>
+            <iconR>./../arts/arcade/r.png</iconR>
+            <iconStart>./../arts/arcade/start.png</iconStart>
+            <iconSelect>./../arts/arcade/select.png</iconSelect>
+			-->
+		</helpsystem>
+
+	</view>
+	
+
+	<!-------------------------------------------------------------------------------------------->
+	<!-- GAMELIST VIEWS -------------------------------------------------------------------------->
+
+	<view name="basic, detailed, video, grid"> <!--  ifHelpPrompts="true" -->
+
+		<!-- HELP BAR position -- TO REMOVE !!! -->
+		<helpsystem name="help">
+			<pos>0.0161 0.9648</pos>
+		</helpsystem>
+
+
+
+        <text name="md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, 
+                    md_lbl_description, md_lbl_players, md_lbl_rating, md_lbl_gametime
+					md_lbl_releasedate, md_lbl_lastplayed, md_lbl_gametime,
+					md_developer, md_publisher, md_genre, md_playcount, md_description,
+					md_gametime, logoText,
+					sys_label, sys_info, sys_description">
+			<origin>0 0</origin>
+			<pos>2 2</pos>
+			<size>0.15 0.015</size>
+			
+			<!-- <color>${themeDarkColor}</color>
+			<fontSize>0.024</fontSize> -->
+
+			<verticalAlignment>top</verticalAlignment> <!-- top / center / bottom -->
+			<color>000000</color>
+			<fontSize>0.024</fontSize>
+			<lineSpacing>1.3</lineSpacing>
+
+			<forceUppercase>0</forceUppercase>
+			<fontPath>./_art/font/${fontBold}</fontPath>
+			<alignment>right</alignment>			
+			<zIndex>40</zIndex>  <!-- Default for METADATA -->
+        </text>
+        <text name="md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_playcount, 
+                    md_lbl_description, md_lbl_players, md_lbl_rating, md_lbl_gametime
+					md_lbl_releasedate, md_lbl_lastplayed, md_lbl_gametime">
+			<!-- <fontPath>./_art/font/${fontBold}</fontPath> -->
+			<color>${userDarkColor}</color>
+			<!-- <glowColor>${themeDarkColor}80</glowColor>
+			<glowSize>1</glowSize> -->
+        </text>
+
+        <text name="md_developer, md_publisher, md_genre, md_playcount, md_description, md_gametime,
+					sys_description">
+			<alignment>left</alignment>
+			<!-- <lineSpacing>1.2</lineSpacing> -->
+        </text>
+        <datetime name="md_releasedate, md_lastplayed">
+			<origin>0 0</origin>
+			<pos>2 2</pos>
+			<size>0.15 0.015</size>
+			
+			<color>000000</color>
+			<fontSize>0.024</fontSize>
+			<forceUppercase>0</forceUppercase>
+			<fontPath>./_art/font/${fontBold}</fontPath>
+			<alignment>left</alignment>
+			
+			<!-- <displayRelative>0</displayRelative> Afficher une date relative : 5 jours avant
+			<format>%d/%m/%Y à %Hh%Mm%Ss</format> Format d'affichage de la date -->
+			<zIndex>40</zIndex>
+        </datetime>
+
+		<text name="md_players">
+			<fontPath>./_art/font/${fontPlayers}</fontPath>
+			<alignment>left</alignment>
+			<fontSize>0.062</fontSize>
+			<color>${themeDarkColor}</color>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>55</zIndex>
+		</text>
+		<rating name="md_rating">
+			<filledPath>./_art/icons/star_filled.png</filledPath>
+			<unfilledPath>./_art/icons/star-empty.png</unfilledPath>
+			<color>${themeDarkColor}</color>
+			<linearSmooth>true</linearSmooth>
+		</rating>
+		
+        <textlist name="gamelist">
+			<origin>0 0</origin>
+            <pos>0.745 0.253</pos>
+            <size>0.22 0.68</size>
+			
+			<selectedColor>${userColor}</selectedColor> <!-- Select file color -->
+			<primaryColor>${themeLightColor}</primaryColor> <!-- File color -->
+			<secondaryColor>${userLightColor}</secondaryColor> <!-- Directory color -->
+
+			<fontPath>./_art/font/${fontLight}</fontPath>
+			<fontSize>0.021</fontSize> <!-- Medium / 0.25 / 1.7 -->
+			<lineSpacing>1.5</lineSpacing> <!-- Default 1.5 -->
+			<alignment>right</alignment>
+			<horizontalMargin>0.0</horizontalMargin>
+			<!-- <forceUppercase>1</forceUppercase> -->
+
+			<selectorColor>${themeDarkColor}00</selectorColor> <!-- Alpha channel RGBA: FF visible / 00 transparent -->
+			<!-- <selectorImagePath>./_art/icon.png</selectorImagePath> -->
+			<selectorHeight>0.05</selectorHeight>
+			<!-- Sound effect on Scroll -->
+			<scrollSound>./_art/sounds/linemove.wav</scrollSound>
+			<zIndex>30</zIndex> <!-- Default -->
+		</textlist>
+		
+		<!-- BACKGROUND IMAGE -->
+		<image name="background">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./_art/white.png</path>
+			<color>${themeLightColor}</color>
+			<tile>true</tile> <!-- Repeat / Streach image -->
+			<zIndex>0</zIndex> <!-- Default -->
+		</image>
+		
+		<image name="bg-image" extra="true">
+			<origin>0 0</origin>
+			<pos>0.0151 0.0445</pos>
+			<size>0.9698 0.911</size>
+			<path>./${system.theme}/background.jpg</path>
+			<color>FFFFFF33</color>
+			<tile>false</tile>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>5</zIndex> <!-- Default  themeDarkColor -->
+		</image>
+
+		<!-- MENU et BORDER -->
+		<image name="bg-game-border" extra="true">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./_art/systemView/bg-system-vertical.png</path>
+			<zIndex>9</zIndex> <!-- Default 10 for extra -->
+		</image>
+		<image name="bg-game-menu" extra="true">
+			<origin>0 0</origin>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<path>./_art/gameView/bg-game-right.png</path>
+			<color>FFFFFF${opacity}</color>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>10</zIndex> <!-- Default 10 for extra -->
+		</image>
+
+		<!-- LOGO -->
+		<image name="logo"> <!-- System -->
+			<origin>0.5 0.5</origin> <!-- Center -->
+			<pos>0.8536 0.161</pos>
+			<maxSize>0.2214 0.1119</maxSize>
+			<path>./${system.theme}/logo-gray.png</path>
+			<path>./${system.theme}/logo-gray-${langue}.png</path>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>50</zIndex> <!-- Default -->
+		</image>
+		<text name="logoText"> <!-- To show if no System LOGO -->
+			<origin>0 0</origin>
+			<pos>0.744 0.1077</pos>
+			<size>0.22 0.11</size>
+			<fontSize>0.045</fontSize>
+			<alignment>center</alignment>
+			<forceUppercase>true</forceUppercase>
+			<color>${themeLightColor}</color>
+		</text>
+		
+		<!-- STATUS Icons -->
+		<image name="md_hidden, md_kidgame, md_favorite">
+			<origin>0.5 0.5</origin>
+			<maxSize>0.032 0.032</maxSize>
+			<color>${userDarkColor}</color>
+			<linearSmooth>true</linearSmooth>
+		</image>
+		
+		<!-- BACKGROUND MUSIC used by Theme -->
+		<sound name="bgsound">
+			<!-- <path>./sounds/system.ogg</path> -->
+		</sound>
+
+	</view>
+
+	<view name="basic, detailed, video">
+		
+		<!-- IMAGE -->
+		<image name="md_image">
+			<origin>0 0</origin>
+			<pos>2 2</pos>
+			<path>./_art/empty.png</path>
+			<zIndex>30</zIndex> <!-- Default -->
+		</image>
+		<image name="md_thumbnail"> <!-- COVERS -->
+			<origin>0 0</origin>
+			<pos>2 2</pos>
+			<path>./_art/empty.png</path>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>30</zIndex> <!-- Default -->
+		</image>
+		<image name="md_marquee">
+			<origin>0.5 0.5</origin> <!-- Center -->
+			<pos>2 2</pos>
+			<linearSmooth>true</linearSmooth>
+			<zIndex>35</zIndex> <!-- Default -->
+		</image>
+		
+		<!-- VIDEO -->
+		<image name="background_video" extra="true">
+			<origin>0 0</origin>
+			<tile>true</tile>
+			<color>${themeDarkColor}80</color>
+			<path>./_art/white.png</path>
+			<zIndex>40</zIndex> <!-- Default 10 for extra -->
+		</image>
+		<video name="md_video">
+			<origin>0.5 0.5</origin>
+			<snapshotSource>image</snapshotSource> <!-- thumbnail -->
+			<showSnapshotNoVideo>true</showSnapshotNoVideo> <!-- Show thumbnail from gamelist.xml if no video and no default -->
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<loops>3</loops>
+			<delay>1</delay> <!-- Second -->
+			<effect>${videoEffect}</effect>
+			<zIndex>50</zIndex> <!-- 30 by Default forced to 5000 by OMX -->
+		</video>
+		
+	</view>
+	
+	<view name="basic" displayName="${basicViewName}">
+	
+		<image name="md_image">
+			<pos>0.053 0.115</pos> <!-- Left align -->
+			<maxSize>0.637 0.764</maxSize>
+		</image>
+
+		<!-- NO MARQUEE / NO VIDEO -->
+		
+	</view>
+
+	<!----------------->
+	<!-- VIDEO VIEWS -->
+	
+	<!-- VIEW DETAILED -->
+	<include>./_art/gameView/viewDetailed.xml</include>
+	
+	<!-- VIEW VIDEO -->
+	<include>./_art/gameView/viewVideo.xml</include>
+	
+	<!-- TODO: view video left ------------------------------------------------------->
+	
+	<!-- VIEW VIDEO FULLSCREEN RIGHT -->
+	<include>./_art/gameView/viewVideoFullscreen.xml</include>
+	
+	<!-- TODO: view videoFullscreen left --------------------------------------------->
+	
+	<!---------------->
+	<!-- GRID VIEWS -->
+	
+	<!-- VIEW GRID -->
+	<include>./_art/gameView/viewGrid.xml</include>
+
+	<!-- VIEW GRID with DETAIL INFO -->
+	<include>./_art/gameView/viewGridDetail.xml</include>
+
+	<!-- VIEW GRID with TITLESHOT -->
+	<include>./_art/gameView/viewGridTitleshot.xml</include>
+
+	<!-- VIEW GRID with SCREENSHOT -->
+	<include>./_art/gameView/viewGridScreenshot.xml</include>
+
+	<!-- VIEW MARQUEE --
+	<include>./_art/gameView/viewMarquee.xml</include> -->
+	
+	<!------------------------------------------------------------------------------------------>
+	<!-- GAMELIST SWAP ------------------------------------------------------------------------->
+
+	<!-- Swap Thumbnail and Image for the COVER and VIDEO -->
+	<subset name="swapImages" displayName="${subset.swapImages}" appliesTo="detailed,video,videoFullscreen,grid,gridDetail,gridTitleshot,gridScreenshot,marquee">
+		<include name="thumbnail" displayName="${thumbnail}">./_art/gameView/swapThumbnail.xml</include> <!-- default -->
+		<include name="image"     displayName="${image}"    >./_art/gameView/swapImage.xml</include>
+	</subset>
+	
+	<!-- Swap Theme Light / Darth -->
+	<subset name="gamelistInfoColor" displayName="${subset.gamelistInfoColor}" appliesTo="basic,detailed,video,videoFullscreen,grid,gridDetail,gridTitleshot,gridScreenshot,marquee">
+		<include name="gamelistInfoLight" 	displayName="${gamelistInfoLight}" /> <!-- Fond clair -->
+		<include name="gamelistInfoDarth" 	displayName="${gamelistInfoDarth}"	>./_art/gameView/swapInfoDarth.xml</include>
+	</subset>
+
+	<!-- TODO: Swap Cover or Not on Video Fullscreen -->
+	
+	<!-- Swap between Gray and Colored Logos -->
+	<subset name="themeSwapColored" displayName="${subset.themeSwapColored}">
+		<include name="themeGray" 	 displayName="${colgray}"/> <!-- Gris -->
+		<include name="themeColored" displayName="${colored}" >./_art/globalView/swapColoredLogo.xml</include>
+	</subset>
+	
+	<!-- Choice font size by Display size -->
+	<subset name="setDisplaySize" displayName="${subset.setDisplaySize}">
+		<include name="setDisplayHd" 	displayName="${displayHd}"  /> <!-- HD Classic -->
+		<include name="setDisplay1680" 	displayName="${display1680}" >./_art/globalView/display1680.xml</include>
+	</subset>
+	
+	<!-- Si l'aide est caché on réaliste ces modifications
+	<view name="basic, detailed, grid, video" ifHelpPrompts="false">
+	    <image name="bg-game" extra="true">
+	     	<path>./_art/bg-game-nohelp-${langue}.png</path>
+	    </image>
+		<textlist name="gamelist">
+			<size>0.2214 0.6639</size>
+		</textlist>
+		<text name="md_description">
+			<size>0.4042 0.1681</size>
+		</text>
+	</view> -->
+	
+	<!-- SYSTEM MUSIC -->
+	<sound name="bgsound">
+        <!-- Try ogg -->
+        <path>./_art/sounds/${system.theme}.ogg</path>
+        <!-- Try mp3 -->
+        <path>./_art/sounds/${system.theme}.mp3</path>
+    </sound>
+
+</theme>
+
+<!-- Hex Opacity Values
+
+Opaque                                         Translucide                                      Invisible
+100%  95%  90%  85%  80%  75%  70%  65%  60%  65%  50%  45%  40%  35%  30%  25%  20%  15%  10%  5%  0%
+ FF   F2   E6   D9   CC   BF   B3   A6   99   8C   80   73   66   59   4D   40   33   26   1A   0D  00
+
+-->

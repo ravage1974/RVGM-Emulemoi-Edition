@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+  <formatVersion>7</formatVersion>
+  
+	<view name="splash">
+
+		<splash name="splash">
+			<backgroundColor>000000FF</backgroundColor>
+		</splash>
+		<image name="background">
+			<path>./_art/splash.jpg</path>
+		</image>
+		
+		<text name="label, rvgmVersion, batoceraVersion, retrobatVersion, emuelecVersion, author, translation" extra="true">
+			<origin>0 0</origin>
+			<rotation>4</rotation>
+			<fontPath>./_art/font/arcade.ttf</fontPath>
+			<fontSize>0.023</fontSize>
+			<color>669e02FF</color>
+			<forceUppercase>true</forceUppercase>
+		</text>
+
+		<text name="label">
+			<pos>0.6 0.55</pos>
+			<size>0.33 0.05</size>
+			<rotation>3</rotation>
+			<alignment>center</alignment>
+		</text>
+		<text name="rvgmVersion, batoceraVersion, retrobatVersion, emuelecVersion, author" extra="true">
+			<size>0.2 0.02</size>
+			<alignment>left</alignment>
+		</text>
+		<text name="rvgmVersion" extra="true">
+			<pos>0.367 0.184</pos>
+			<text>RVGM V1.95</text>
+		</text>
+		<text name="batoceraVersion" extra="true">
+			<pos>0.367 0.239</pos>
+			<text>- BATOCERA 5.26+</text>
+		</text>
+		<text name="retrobatVersion" extra="true">
+			<pos>0.367 0.269</pos>
+			<text>- RETROBAT 3+</text>
+		</text>
+		<text name="emuelecVersion" extra="true">
+			<pos>0.367 0.299</pos>
+			<text>- EMUELEC 3.5+</text>
+		</text>
+		
+		<text name="author" extra="true">
+			<pos>0.367 0.4</pos>
+			<text>BY DARKNIOR</text>
+		</text>
+		<text name="translation">
+			<pos>0.62 0.335</pos>
+			<size>0.322 0.12</size>
+			<rotation>3</rotation>
+			<fontSize>0.020</fontSize>
+			<alignment>left</alignment>
+			<text>THANKS FOR HELP AND TRANSLATION TO:
+
+vv∆∆7, Gilou9999, Azvarel,
+RaM5eS, Adolfo69, SultanSsh,
+@nwildner, Ravage1974</text>
+		</text>
+		
+		<!--
+		English update         : @nwildner
+		Portuguese translation : Azvarel
+		arabe translation      : SultanSsh
+		italian translation    : Adolfo69
+		espagnol translation   : RaM5eS
+		
+		Collections            : Ravage1974
+		-->
+		
+		<image name="progressbar">
+			<origin>0 0</origin>
+			<!-- <pos>0.6 0.56</pos>
+			<size>0.307 0.045</size> -->
+			<pos>0.263 0.7</pos>
+			<size>0.455 0.065</size>
+			<rotation>3</rotation>
+			<color>669e0280</color>
+		</image>
+		<image name="progressbar:active">
+			<color>669e02FF</color>
+		</image>
+		
+	</view>
+	
+</theme>

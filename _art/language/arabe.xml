@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+	<formatVersion>7</formatVersion>
+	
+	<variables>
+		
+		<langue>ar</langue>
+		
+		<fontLight>Cairo-Regular.ttf</fontLight> 		<!-- gamelist -->
+		<fontMedium>Cairo-Regular.ttf</fontMedium>
+		<fontBold>Cairo-Bold.ttf</fontBold>
+
+		<!-- GENERAL -->
+
+		<yes>نعم</yes>
+		<no>لا</no>
+
+	<!-- Swap Theme Color -->
+		<subset.swapColor>لون السِمة</subset.swapColor>
+		<colblue>أزرق</colblue>
+		<coldarkBlue>أزرق عاتم</coldarkBlue>
+		<colpurple>بنفسجي</colpurple>
+		<colred>أحمر</colred>
+		<colorange>برتقالي</colorange>
+		<colyellow>أصفر</colyellow>
+		<colgreen>أخضر</colgreen>
+
+	<!-- Swap Theme Opacity -->
+		<subset.swapOpacity>مظهر السِمة</subset.swapOpacity>
+		<translucent>شفاف</translucent>
+		<opaque>معتم</opaque>
+
+	<!-- Swap Video Effect -->
+		<subset.swapVideoEffect>تأثير عرض الفيديو</subset.swapVideoEffect>
+		<videoEffectDefault>لاشيء</videoEffectDefault>
+		<videoEffectBump>إستخراج</videoEffectBump>
+
+		<!-- SYSTEM SWAP -->
+		
+	<!-- Swap Ambiance-->
+		<subset.swapAmbiance>البيئة الفنية</subset.swapAmbiance>
+		<library>مكتبة الماضي</library> <!-- مكان للمعرفة و تاريخ الماضي -->
+		<artGallery>استديو الفن في الصور</artGallery> <!-- معرض جميل للصور -->
+		<mediaLibrary>مكتبة الوسائط و الفيديو</mediaLibrary> <!-- فيديوهات لعرض أي شيء -->
+		
+	<!-- Swap Menu -->
+		<subset.systemView>عرض قائمة الأنظة</subset.systemView>
+		<menuVertRight>قائمة عمودية لليمين</menuVertRight>
+		<menuVertLeft>قائمة عمودية لليسار</menuVertLeft>
+		<menuHorizDown>قائمة افقية بالأسفل</menuHorizDown>
+		<menuWheelRight>عجلة عمودية لليمين</menuWheelRight>
+		<menuWheelLeft>عجلة عمودية لليسار</menuWheelLeft>
+		
+	<!--  Swap Video Preview Type -->
+		<subset.systemSwapVideo>فيديو عام للأنظمة</subset.systemSwapVideo>
+		<swapVideoRandom>ألعاب عشوائة</swapVideoRandom>
+		<swapVideoCommercial>إعلان تلفزيوني</swapVideoCommercial>
+		<swapVideoHide>لاشيء</swapVideoHide>
+		
+	<!-- Swap between Gray and Colored Logos -->
+		<subset.themeSwapColored>تباين شعارات الأنظمة</subset.themeSwapColored>
+		<colgray>رمادي</colgray>
+		<colored>ملون</colored>
+		
+	<!-- Choice font size by Display size -->
+		<subset.setDisplaySize>عرض دقة الشاشة</subset.setDisplaySize>
+		<displayHd>HD 1080p / 720p</displayHd>
+		<display1680>1680x1050</display1680>
+		
+	<!-- Swap CRT Video Shader -->
+		<subset.swapVideoShader>نطاق مظهر الفيديو</subset.swapVideoShader>
+		<videoShaderNone>لاشيء</videoShaderNone>
+		<videoShaderCrt>CRT شاشة قديمة</videoShaderCrt>
+		
+	<!-- Info Labels -->
+<sysLabel>الصانع
+النوع
+الجيل
+اصدر في
+الوسائط
+وحدة التحكم
+
+مجموع المتوفر</sysLabel>
+
+		<!-- GAMES LIST -->
+
+		<videoFullscreenViewName>فيديو كامل الشاشة</videoFullscreenViewName>
+		<gridDetailViewName>غلاف + تفاصيل</gridDetailViewName>
+		<tilesTitleshotVideoViewName>عنوان الغلاف</tilesTitleshotVideoViewName>
+		<tilesScreenshotVideoMarqueeViewName>لقطة شاشة + شعار</tilesScreenshotVideoMarqueeViewName>
+		<marqueeDetailViewName>شاشة إسمية (تجريبي)ا</marqueeDetailViewName>
+		
+		<subset.gamelistInfoColor>مظهر قائمة الألعاب</subset.gamelistInfoColor>
+		<gamelistInfoLight>فاتح</gamelistInfoLight>
+		<gamelistInfoDarth>معتم</gamelistInfoDarth>
+
+		<subset.swapImages>اختر علامة الغلاف الخاصة بك</subset.swapImages>
+		<thumbnail>thumbnail</thumbnail>
+		<image>image</image>
+
+	</variables>
+	
+</theme>
+
+<!--
+TITLES IMAGES to translate:
+
+المفضلة     = ???
+2 لاعبين     = ألعاب لاعبين اثنين 
+4 لاعبين     = ألعاب مليئة بالمتعة لأربعة لاعبين
+آخر لعب   = ???
+جميع الألعاب     = ???
+لم يتم اللعب  = ???
+
+المجموعة   = ???
+
+-->
